@@ -1,0 +1,80 @@
+{
+  "name": "chai-ip",
+  "version": "1.0.0",
+  "description": "Extend Chai Assertion library with tests for ip addresses",
+  "author": "Julian Grinblat <julian@dotcore.co.il>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "type": "module",
+  "keywords": [
+    "chai",
+    "chai-plugin",
+    "browser",
+    "ip"
+  ],
+  "files": [
+    "index.js",
+    "types/index.d.ts"
+  ],
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "imports": {
+    "#is-ip": {
+      "node": "net",
+      "browser": "is-ip"
+    }
+  },
+  "types": "./types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dotcore64/chai-ip.git"
+  },
+  "scripts": {
+    "lint": "eslint --cache .",
+    "build": "cd types && tsc",
+    "test": "npm run test:node && npm run test:browser",
+    "test:node": "mocha",
+    "test:browser": "karma start karma.conf.cjs --single-run --no-auto-watch",
+    "tdd": "karma start karma.conf.cjs",
+    "cover": "c8 npm run test:node && npm run test:browser",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "is-ip": "^4.0.0"
+  },
+  "peerDependencies": {
+    "chai": "^4.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.2.1",
+    "@types/chai": "^4.3.1",
+    "c8": "^7.11.2",
+    "chai": "^4.3.6",
+    "eslint": "^8.14.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-mocha": "^10.0.4",
+    "eslint-plugin-node": "^11.1.0",
+    "karma": "^6.3.19",
+    "karma-chrome-launcher": "^3.1.1",
+    "karma-coverage": "^2.2.0",
+    "karma-firefox-launcher": "^2.1.2",
+    "karma-mocha": "^2.0.1",
+    "karma-rollup-preprocessor": "^7.0.8",
+    "karma-sourcemap-loader": "^0.3.8",
+    "karma-spec-reporter": "^0.0.34",
+    "mocha": "^10.0.0",
+    "puppeteer": "^13.7.0",
+    "rollup": "^2.71.1",
+    "rollup-plugin-istanbul": "^3.0.0",
+    "typescript": "^4.6.4"
+  }
+}
