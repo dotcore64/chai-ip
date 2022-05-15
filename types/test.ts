@@ -1,5 +1,5 @@
 import chai from 'chai';
-import ChaiIp from './index';
+import ChaiIp from 'chai-ip'; // eslint-disable-line import/no-unresolved,node/no-missing-import
 
 chai.use(ChaiIp);
 
