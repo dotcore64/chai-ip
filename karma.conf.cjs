@@ -19,12 +19,16 @@ module.exports = (config) => {
     // list of files / patterns to load in the browser
     files: [
       { pattern: 'test/index.js', type: 'module' },
+      { pattern: 'index.js', type: 'module', included: false },
+      { pattern: 'node_modules/**/*.js', type: 'module', included: false },
     ],
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'test/*.js': ['rollup', 'sourcemap'],
+      'test/*.js': ['rollup', 'node-resolve', 'sourcemap'],
+      'index.js': ['coverage', 'node-resolve'],
+      'node_modules/@(is-ip|ip-regex)/**/*.js': ['node-resolve'],
     },
 
     // test results reporter to use
@@ -58,8 +62,8 @@ module.exports = (config) => {
     concurrency: Number.POSITIVE_INFINITY,
 
     rollupPreprocessor: {
+      external: 'chai-ip',
       plugins: [
-        require('rollup-plugin-istanbul')({ exclude: ['**/test/**', 'node_modules/**'] }),
         require('@rollup/plugin-node-resolve').default({
           mainFields: ['module', 'browser', 'main'],
         }),
