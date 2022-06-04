@@ -1,6 +1,6 @@
 {
-  "extends": ["airbnb-base", "plugin:unicorn/recommended", "plugin:node/recommended", "plugin:eslint-comments/recommended"],
-  "plugins": ["unicorn", "node", "eslint-comments"],
+  "extends": ["airbnb-base", "plugin:n/recommended", "plugin:unicorn/recommended", "plugin:eslint-comments/recommended"],
+  "plugins": ["n", "unicorn", "eslint-comments"],
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module"
