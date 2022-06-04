@@ -75,6 +75,6 @@
     "puppeteer": "^14.1.1",
     "rollup": "^2.75.3",
     "rollup-plugin-istanbul": "^3.0.0",
-    "typescript": "^4.7.2"
+    "typescript": "^4.7.3"
   }
 }
