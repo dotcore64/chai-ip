@@ -1,4 +1,4 @@
-// eslint-disable-next-line import/no-unresolved,node/no-missing-import
+// eslint-disable-next-line import/no-unresolved,n/no-missing-import
 import { isIP, isIPv4, isIPv6 } from '#is-ip'; // this is 'net' in node, 'is-ip' in browsers
 
 /**

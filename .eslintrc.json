@@ -1,6 +1,6 @@
 {
-  "extends": ["airbnb-base", "plugin:unicorn/recommended", "plugin:node/recommended"],
-  "plugins": ["unicorn", "node"],
+  "extends": ["airbnb-base", "plugin:n/recommended", "plugin:unicorn/recommended", "plugin:eslint-comments/recommended"],
+  "plugins": ["n", "unicorn", "eslint-comments"],
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module"
@@ -15,7 +15,8 @@
         "./test/*.js",
         "karma.conf.cjs"
       ]
-    }]
+    }],
+    "eslint-comments/no-unused-disable": "error"
   },
   "overrides": [
     {
