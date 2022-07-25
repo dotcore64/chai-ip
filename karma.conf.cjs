@@ -4,6 +4,15 @@
 process.env.NODE_ENV = 'test';
 if (!process.env.CHROME_BIN) process.env.CHROME_BIN = require('puppeteer').executablePath(); // eslint-disable-line global-require
 
+const dependencies = [
+  'is-ip',
+  'ip-regex',
+  'super-regex',
+  'is-regexp',
+  'time-span',
+  'clone-regexp',
+];
+
 module.exports = (config) => {
   config.set({
 
@@ -26,7 +35,7 @@ module.exports = (config) => {
     preprocessors: {
       'test/*.js': ['rollup', 'node-resolve', 'sourcemap'],
       'index.js': ['coverage', 'node-resolve'],
-      'node_modules/@(is-ip|ip-regex)/**/*.js': ['node-resolve'],
+      [`node_modules/@(${dependencies.join('|')})/**/*.js`]: ['node-resolve'],
     },
 
     // test results reporter to use
