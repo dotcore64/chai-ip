@@ -62,7 +62,7 @@ expect('2001:0db8:85a3:0000:0000:8a2e:0370:7334').to.be.an.ipv6;
 
 See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
 
-[build-badge]: https://img.shields.io/github/workflow/status/dotcore64/chai-ip/test/master?style=flat-square
+[build-badge]: https://img.shields.io/github/actions/workflow/status/dotcore64/chai-ip/test.yml?event=push&style=flat-square
 [build]: https://github.com/dotcore64/chai-ip/actions
 
 [npm-badge]: https://img.shields.io/npm/v/chai-ip.svg?style=flat-square
