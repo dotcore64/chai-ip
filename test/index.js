@@ -1,6 +1,6 @@
 import { expect, use } from 'chai';
 
-// eslint-disable-next-line import/no-unresolved,n/no-extraneous-import
+// eslint-disable-next-line import/no-unresolved
 import ip from 'chai-ip';
 
 use(ip);
