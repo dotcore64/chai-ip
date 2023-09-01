@@ -45,7 +45,7 @@
     "cover": "npm run test:types && c8 npm run test:node && npm run test:browser"
   },
   "dependencies": {
-    "is-ip": "^5.0.0"
+    "is-ip": "^5.0.1"
   },
   "peerDependencies": {
     "chai": "^4.0.0"
