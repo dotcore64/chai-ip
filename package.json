@@ -55,7 +55,7 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@types/chai": "^4.3.11",
     "@types/node": "^20.10.6",
-    "c8": "^8.0.1",
+    "c8": "^9.1.0",
     "chai": "^5.0.0",
     "eslint": "^8.54.0",
     "eslint-config-airbnb-base": "^15.0.0",
