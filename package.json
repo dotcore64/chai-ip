@@ -76,6 +76,6 @@
     "mocha": "^10.4.0",
     "puppeteer": "^22.6.1",
     "rollup": "^4.17.2",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.5"
   }
 }
