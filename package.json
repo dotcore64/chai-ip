@@ -55,7 +55,7 @@
     "@rollup/plugin-commonjs": "^25.0.8",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@types/chai": "^4.3.14",
-    "@types/node": "^20.12.7",
+    "@types/node": "^20.13.0",
     "c8": "^9.1.0",
     "chai": "^5.1.1",
     "eslint": "^8.57.0",
