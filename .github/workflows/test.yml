@@ -42,9 +42,9 @@ jobs:
         run: npm run cover
 
       - name: Install lcov
-        run: |
-          sudo apt update
-          sudo apt install lcov
+        uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: lcov
 
       - name: Merge lcov reports
         run: find coverage -name lcov.info -exec echo -n -a \"{}\" \; | xargs -d '\n' -I{} echo lcov -o coverage/lcov.info {}
