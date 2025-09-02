@@ -18,6 +18,7 @@ jobs:
         chai-version:
           - 4.x
           - 5.x
+          - 6.x
 
     steps:
       - uses: actions/checkout@v5
