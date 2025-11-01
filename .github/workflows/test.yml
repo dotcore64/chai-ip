@@ -12,9 +12,9 @@ jobs:
     strategy:
       matrix:
         node-version:
-          - 18.x
           - 20.x
           - 22.x
+          - 24.x
         chai-version:
           - 4.x
           - 5.x
