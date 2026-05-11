@@ -5,11 +5,7 @@
     "noImplicitThis": true,
     "strictNullChecks": false,
     "strictFunctionTypes": true,
-    "baseUrl": "../",
     "noEmit": true
   },
-  "files": [
-    "index.d.ts",
-    "test.ts"
-  ]
+  "files": ["index.d.ts", "test.ts"]
 }
