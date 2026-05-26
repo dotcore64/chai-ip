@@ -22,7 +22,7 @@ export default ({ Assertion }) => {
    * @name ip
    * @api public
    */
-  Assertion.addProperty('ip', function () { // eslint-disable-line func-names
+  Assertion.addProperty('ip', function () {  
     this.assert(
       isIP(this._obj),
       'expected #{this} to be an ip',
@@ -42,7 +42,7 @@ export default ({ Assertion }) => {
    * @name ipv4
    * @api public
    */
-  Assertion.addProperty('ipv4', function () { // eslint-disable-line func-names
+  Assertion.addProperty('ipv4', function () {  
     this.assert(
       isIPv4(this._obj),
       'expected #{this} to be an ipv4',
@@ -62,7 +62,7 @@ export default ({ Assertion }) => {
    * @name ipv6
    * @api public
    */
-  Assertion.addProperty('ipv6', function () { // eslint-disable-line func-names
+  Assertion.addProperty('ipv6', function () {  
     this.assert(
       isIPv6(this._obj),
       'expected #{this} to be an ipv6',
