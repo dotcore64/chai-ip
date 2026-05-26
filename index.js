@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-unresolved
-import { isIP, isIPv4, isIPv6 } from '#is-ip'; // this is 'net' in node, 'is-ip' in browsers
+import { isIP, isIPv4, isIPv6 } from "#is-ip"; // this is 'net' in node, 'is-ip' in browsers
 
 /**
  * ## Assertions
@@ -22,11 +22,11 @@ export default ({ Assertion }) => {
    * @name ip
    * @api public
    */
-  Assertion.addProperty('ip', function () {  
+  Assertion.addProperty("ip", function () {
     this.assert(
       isIP(this._obj),
-      'expected #{this} to be an ip',
-      'expected #{this} to not be an ip',
+      "expected #{this} to be an ip",
+      "expected #{this} to not be an ip",
     );
   });
 
@@ -42,11 +42,11 @@ export default ({ Assertion }) => {
    * @name ipv4
    * @api public
    */
-  Assertion.addProperty('ipv4', function () {  
+  Assertion.addProperty("ipv4", function () {
     this.assert(
       isIPv4(this._obj),
-      'expected #{this} to be an ipv4',
-      'expected #{this} to not be an ipv4',
+      "expected #{this} to be an ipv4",
+      "expected #{this} to not be an ipv4",
     );
   });
 
@@ -62,11 +62,11 @@ export default ({ Assertion }) => {
    * @name ipv6
    * @api public
    */
-  Assertion.addProperty('ipv6', function () {  
+  Assertion.addProperty("ipv6", function () {
     this.assert(
       isIPv6(this._obj),
-      'expected #{this} to be an ipv6',
-      'expected #{this} to not be an ipv6',
+      "expected #{this} to be an ipv6",
+      "expected #{this} to not be an ipv6",
     );
   });
 };
