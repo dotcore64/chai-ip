@@ -1,47 +1,47 @@
 // Karma configuration
 // Generated on Wed May 11 2016 23:26:57 GMT+0900 (JST)
 
-process.env.NODE_ENV = 'test';
-if (!process.env.CHROME_BIN) process.env.CHROME_BIN = require('puppeteer').executablePath();  
+process.env.NODE_ENV = "test";
+if (!process.env.CHROME_BIN)
+  process.env.CHROME_BIN = require("puppeteer").executablePath();
 
 const dependencies = [
-  'is-ip',
-  'ip-regex',
-  'super-regex',
-  'is-regexp',
-  'time-span',
-  'clone-regexp',
+  "is-ip",
+  "ip-regex",
+  "super-regex",
+  "is-regexp",
+  "time-span",
+  "clone-regexp",
 ];
 
 module.exports = (config) => {
   config.set({
-
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: "",
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha'],
+    frameworks: ["mocha"],
 
     // list of files / patterns to load in the browser
     files: [
-      { pattern: 'test/index.js', type: 'module' },
-      { pattern: 'index.js', type: 'module', included: false },
-      { pattern: 'node_modules/**/*.js', type: 'module', included: false },
+      { pattern: "test/index.js", type: "module" },
+      { pattern: "index.js", type: "module", included: false },
+      { pattern: "node_modules/**/*.js", type: "module", included: false },
     ],
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'test/*.js': ['rollup', 'node-resolve', 'sourcemap'],
-      'index.js': ['coverage', 'node-resolve'],
-      [`node_modules/@(${dependencies.join('|')})/**/*.js`]: ['node-resolve'],
+      "test/*.js": ["rollup", "node-resolve", "sourcemap"],
+      "index.js": ["coverage", "node-resolve"],
+      [`node_modules/@(${dependencies.join("|")})/**/*.js`]: ["node-resolve"],
     },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['spec', 'coverage'],
+    reporters: ["spec", "coverage"],
 
     // web server port
     port: 9876,
@@ -58,7 +58,7 @@ module.exports = (config) => {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['ChromeHeadless', 'FirefoxHeadless'],
+    browsers: ["ChromeHeadless", "FirefoxHeadless"],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
@@ -69,25 +69,22 @@ module.exports = (config) => {
     concurrency: Number.POSITIVE_INFINITY,
 
     rollupPreprocessor: {
-      external: 'chai-ip',
+      external: "chai-ip",
       plugins: [
-        require('@rollup/plugin-node-resolve').default({  
-          mainFields: ['module', 'browser', 'main'],
+        require("@rollup/plugin-node-resolve").default({
+          mainFields: ["module", "browser", "main"],
         }),
-        require('@rollup/plugin-commonjs')({ include: 'node_modules/**' }),  
+        require("@rollup/plugin-commonjs")({ include: "node_modules/**" }),
       ],
       output: {
-        format: 'esm',
-        sourcemap: 'inline',
+        format: "esm",
+        sourcemap: "inline",
       },
     },
 
     coverageReporter: {
-      dir: 'coverage/',
-      reporters: [
-        { type: 'html' },
-        { type: 'lcov' },
-      ],
+      dir: "coverage/",
+      reporters: [{ type: "html" }, { type: "lcov" }],
     },
   });
 };

@@ -1,48 +1,54 @@
-import { expect, use } from 'chai';
+import { expect, use } from "chai";
 
 // eslint-disable-next-line import/no-unresolved
-import ip from 'chai-ip';
+import ip from "chai-ip";
 
 use(ip);
 
-describe('ip', () => {
-  it('#ip', () => {
-    expect('127.0.0.1').to.be.an.ip;  
-    expect('2001:0db8:85a3:0000:0000:8a2e:0370:7334').to.be.an.ip;  
+describe("ip", () => {
+  it("#ip", () => {
+    expect("127.0.0.1").to.be.an.ip;
+    expect("2001:0db8:85a3:0000:0000:8a2e:0370:7334").to.be.an.ip;
 
     expect(() => {
-      expect('127.0.0.1').to.not.be.an.ip;  
-    }).to.throw('expected \'127.0.0.1\' to not be an ip');
+      expect("127.0.0.1").to.not.be.an.ip;
+    }).to.throw("expected '127.0.0.1' to not be an ip");
 
     expect(() => {
-      expect('2001:0db8:85a3:0000:0000:8a2e:0370:7334').to.not.be.an.ip;  
-    }).to.throw('expected \'2001:0db8:85a3:0000:0000:8a2e:0370:73…\' to not be an ip');
+      expect("2001:0db8:85a3:0000:0000:8a2e:0370:7334").to.not.be.an.ip;
+    }).to.throw(
+      "expected '2001:0db8:85a3:0000:0000:8a2e:0370:73…' to not be an ip",
+    );
   });
 
-  it('#ipv4', () => {
-    expect('127.0.0.1').to.be.an.ipv4;  
+  it("#ipv4", () => {
+    expect("127.0.0.1").to.be.an.ipv4;
 
     expect(() => {
-      expect('2001:0db8:85a3:0000:0000:8a2e:0370:7334').to.be.an.ipv4;  
-    }).to.throw('expected \'2001:0db8:85a3:0000:0000:8a2e:0370:73…\' to be an ipv4');
+      expect("2001:0db8:85a3:0000:0000:8a2e:0370:7334").to.be.an.ipv4;
+    }).to.throw(
+      "expected '2001:0db8:85a3:0000:0000:8a2e:0370:73…' to be an ipv4",
+    );
 
     expect(() => {
-      expect('127.0.0.1').to.not.be.an.ipv4;  
-    }).to.throw('expected \'127.0.0.1\' to not be an ip');
+      expect("127.0.0.1").to.not.be.an.ipv4;
+    }).to.throw("expected '127.0.0.1' to not be an ip");
 
-    expect('2001:0db8:85a3:0000:0000:8a2e:0370:7334').to.not.be.an.ipv4;  
+    expect("2001:0db8:85a3:0000:0000:8a2e:0370:7334").to.not.be.an.ipv4;
   });
 
-  it('#ipv6', () => {
+  it("#ipv6", () => {
     expect(() => {
-      expect('127.0.0.1').to.be.an.ipv6;  
-    }).to.throw('expected \'127.0.0.1\' to be an ipv6');
-    expect('2001:0db8:85a3:0000:0000:8a2e:0370:7334').to.be.an.ipv6;  
+      expect("127.0.0.1").to.be.an.ipv6;
+    }).to.throw("expected '127.0.0.1' to be an ipv6");
+    expect("2001:0db8:85a3:0000:0000:8a2e:0370:7334").to.be.an.ipv6;
 
-    expect('127.0.0.1').to.not.be.an.ipv6;  
+    expect("127.0.0.1").to.not.be.an.ipv6;
 
     expect(() => {
-      expect('2001:0db8:85a3:0000:0000:8a2e:0370:7334').to.not.be.an.ipv6;  
-    }).to.throw('expected \'2001:0db8:85a3:0000:0000:8a2e:0370:73…\' to not be an ipv6');
+      expect("2001:0db8:85a3:0000:0000:8a2e:0370:7334").to.not.be.an.ipv6;
+    }).to.throw(
+      "expected '2001:0db8:85a3:0000:0000:8a2e:0370:73…' to not be an ipv6",
+    );
   });
 });
