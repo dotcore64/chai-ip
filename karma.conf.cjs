@@ -2,7 +2,7 @@
 // Generated on Wed May 11 2016 23:26:57 GMT+0900 (JST)
 
 process.env.NODE_ENV = 'test';
-if (!process.env.CHROME_BIN) process.env.CHROME_BIN = require('puppeteer').executablePath(); // eslint-disable-line global-require
+if (!process.env.CHROME_BIN) process.env.CHROME_BIN = require('puppeteer').executablePath();  
 
 const dependencies = [
   'is-ip',
@@ -71,10 +71,10 @@ module.exports = (config) => {
     rollupPreprocessor: {
       external: 'chai-ip',
       plugins: [
-        require('@rollup/plugin-node-resolve').default({ // eslint-disable-line global-require
+        require('@rollup/plugin-node-resolve').default({  
           mainFields: ['module', 'browser', 'main'],
         }),
-        require('@rollup/plugin-commonjs')({ include: 'node_modules/**' }), // eslint-disable-line global-require
+        require('@rollup/plugin-commonjs')({ include: 'node_modules/**' }),  
       ],
       output: {
         format: 'esm',
