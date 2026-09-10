@@ -78,7 +78,7 @@
     "karma-spec-reporter": "^0.0.36",
     "mocha": "^11.7.6",
     "prettier": "3.9.5",
-    "puppeteer": "^25.3.0",
+    "puppeteer": "^25.10.0",
     "rollup": "^4.62.2",
     "typescript": "^7.0.2"
   }
